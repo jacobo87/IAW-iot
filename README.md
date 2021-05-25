@@ -26,7 +26,7 @@ También existirá un agente de [Telegraf](https://www.influxdata.com/time-serie
 Para realizar el despliegue de los servicios de [MQTT](https://mqtt.org/), [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/), [InfluxDB](https://www.influxdata.com/) y [Grafana](https://grafana.com/), vamos a utilizar [Docker Compose](https://docs.docker.com/compose/) y contenedores [Docker](https://www.docker.com/).
 
 ## Estructura
-[Diagrama](./images/diagram.png)
+![Diagrama](./images/diagram.png)
 
 ## REFERENCIAS
 - [José Juan Sánchez IoT Dashboard](http://josejuansanchez.org/iot-dashboard/)
