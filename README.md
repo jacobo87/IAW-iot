@@ -30,3 +30,4 @@ Para realizar el despliegue de los servicios de [MQTT](https://mqtt.org/), [Tele
 
 ## REFERENCIAS
 - [José Juan Sánchez IoT Dashboard](http://josejuansanchez.org/iot-dashboard/)
+- [Repositorio de Github - José Juan Sánchez](https://github.com/josejuansanchez/co2-celia)
