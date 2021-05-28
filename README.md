@@ -3,6 +3,15 @@
 >Módulo: IAW - Implantación de Aplicaciones Web   
 >Ciclo: CFGS Administración de Sistemas Informáticos en Red 
 
+## Contenido del Repositorio
+- README 
+- ``docker-compose.yml`` con contenedores Docker que vamos a usar
+- ``.env``archivo de entorno para nuestro ``docker-compose-yml```
+- ``images`` directorio con las capturas empleadas
+- ``mosquitto/mosquitto.conf`` archivo de configuración para ``mosquitto``
+- ``telegraf/telegraf.conf`` archivo de configuración para ``telegraf``
+- ``grafana-provisionimg`` con ejemplos de dashboards y ``datos`` para ``grafana`` 
+
 # Descripción del proyecto
 
 En cada aula del instituto vamos a tener un [Wemos D1 mini](https://www.wemos.cc/en/latest/d1/d1_mini.html), un [sensor de CO2](https://wiki.keyestudio.com/KS0457_keyestudio_CCS811_Carbon_Dioxide_Air_Quality_Sensor) y un [sensor de temperatura/humedad DHT11](https://learn.adafruit.com/dht/overview) que van a ir tomando medidas de forma constante y las van a ir publicando en un topic de un broker MQTT. Podríamos seguir la siguiente estructura de nombres para los topics del edificio:
