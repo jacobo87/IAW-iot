@@ -64,7 +64,19 @@ Extraemos el archivo de configuración de ``telegraf``:
 ```
 docker run --rm telegraf telegraf config > telegraf.conf
 ```
+#### PRUEBAS
+Usamos de un cliente MQTT para publicar mensajes de prueba en el broker MQTT que acabamos de crear.
 
+```
+sudo docker run --init -it --rm efrecon/mqtt-client pub -h 3.219.56.4 -p 1883 -t "iescelia/aula22/co2" -m 10
+```
+
+- Utilizamos la imagen Docker efrecon/mqtt-client que contiene el cliente MQTT (mosquitto_pub) para publicar mensajes en un topic de un broker MQTT.
+- Utilizamos el comando pub para publicar un mensaje en el broker MQTT.
+- Con el parámetro -h indicamos el hosts (broker MQTT) con el que queremos conectarnos. En este ejemplo estamos utilizando el broker de prueba de test.mosquitto.org, pero tendremos que cambiar este broker por la dirección IP de nuestro broker MQTT.
+- Con el parámetro -p indicamos el puerto, que por defecto, será el puerto 1883.
+- Con el parámetro -t indicamos el topic que vamos a utilizar para publicar nuestro mensaje. En este ejemplo, estamos utilizando el topic iescelia/aula22/co2.
+- Con el parámetro -m indicamos el contenido del mensaje que queremos publicar. En este ejemplo, estamos publicando el mensaje 10.
 
 ## Dashboard Grafana
 ![Grafana](./images/grafana.png)
