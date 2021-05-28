@@ -28,6 +28,12 @@ Para realizar el despliegue de los servicios de [MQTT](https://mqtt.org/), [Tele
 ## Estructura
 ![Diagrama](./images/diagram.png)
 
+## Configuración
+Utilizaremos una instancia de [AWS EC2](https://aws.amazon.com/es/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Categories=categories%23compute&trk=ps_a134p000006pgVlAAI&trkCampaign=acq_paid_search_brand&sc_channel=PS&sc_campaign=acquisition_FR&sc_publisher=Google&sc_category=Cloud%20Computing&sc_country=FR&sc_geo=EMEA&sc_outcome=acq&sc_detail=aws%20ec2&sc_content=EC2_e&sc_matchtype=e&sc_segment=496473794115&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Cloud%20Computing|EC2|FR|EN|Text&s_kwcid=AL!4422!3!496473794115!e!!g!!aws%20ec2&ef_id=EAIaIQobChMI1fPKn4Xs8AIVzIODBx10NwTzEAAYASAAEgJ_0vD_BwE:G:s&s_kwcid=AL!4422!3!496473794115!e!!g!!aws%20ec2&awsf.Free%20Tier%20Types=*all) de [Ubuntu Server](https://ubuntu.com/download/server) con 4GB de RAM.
+
+Para los grupos de seguridad añadimos los siguientes: 
+![AWS EC2](./images/AWS.png)
+
 ## REFERENCIAS
 - [José Juan Sánchez IoT Dashboard](http://josejuansanchez.org/iot-dashboard/)
 - [Repositorio de Github - José Juan Sánchez](https://github.com/josejuansanchez/co2-celia)
