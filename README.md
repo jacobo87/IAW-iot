@@ -6,7 +6,7 @@
 ## Contenido del Repositorio
 - README 
 - ``docker-compose.yml`` con contenedores Docker que vamos a usar
-- ``.env``archivo de entorno para nuestro ``docker-compose-yml```
+- ``.env``archivo de entorno para nuestro ``docker-compose-yml``
 - ``images`` directorio con las capturas empleadas
 - ``mosquitto/mosquitto.conf`` archivo de configuración para ``mosquitto``
 - ``telegraf/telegraf.conf`` archivo de configuración para ``telegraf``
