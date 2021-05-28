@@ -34,6 +34,32 @@ Utilizaremos una instancia de [AWS EC2](https://aws.amazon.com/es/free/?all-free
 Para los grupos de seguridad añadimos los siguientes: 
 ![AWS EC2](./images/AWS.png)
 
+### Creación de archivos de configuración necesarios
+Para ``mosquitto``necesitamos que tenga un archivo de configuración con este contenido: 
+```
+listener 1883
+allow_anonymous true
+```
+- Le indicamos que escuche en el puerto 1883 en todas las interfaces.
+- Le permitimos a cualquiera que pueda leer la información sin identificarse.
+
+Para ``telegraf``:
+```
+[[inputs.mqtt_consumer]]
+   servers = ["tcp://mosquitto:1883"] 
+
+   topics = [
+     "iescelia/#" 
+   ]
+
+  data_format = "value" 
+  data_type = "float"
+```
+- Indicamos la URL del broker MQTT al que queremos conectarnos. En nuestro caso pondremos el nombre del servicio mosquitto que es como lo hemos definido en nuestro archivo docker-compose.yml.
+- Indicamos los topics a los que queremos suscribirnos. El carácter # al final del topic iescelia/# indica que nos vamos a suscribir a cualquier topic que haya después de iescelia/.
+- Indicamos cuál es el formato de los datos que vamos a recibir por MQTT. En este caso indicamos el formato value, porque en el mensaje MQTT sólo vamos a recibir un valor numérico.
+- Indicamos el tipo de dato del valor numérico que vamos a recibir por MQTT.
+
 ## REFERENCIAS
 - [José Juan Sánchez IoT Dashboard](http://josejuansanchez.org/iot-dashboard/)
 - [Repositorio de Github - José Juan Sánchez](https://github.com/josejuansanchez/co2-celia)
