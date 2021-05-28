@@ -35,7 +35,7 @@ Para los grupos de seguridad añadimos los siguientes:
 ![AWS EC2](./images/AWS.png)
 
 ### Creación de archivos de configuración necesarios
-Para ``mosquitto``necesitamos que tenga un archivo de configuración con este contenido: 
+Para ``mosquitto`` necesitamos que tenga un archivo de configuración con este contenido: 
 ```
 listener 1883
 allow_anonymous true
@@ -43,7 +43,7 @@ allow_anonymous true
 - Le indicamos que escuche en el puerto 1883 en todas las interfaces.
 - Le permitimos a cualquiera que pueda leer la información sin identificarse.
 
-Para ``telegraf``:
+Para ``telegraf`` :
 ```
 [[inputs.mqtt_consumer]]
    servers = ["tcp://mosquitto:1883"] 
