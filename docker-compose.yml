@@ -11,7 +11,7 @@ services:
       - mosquitto_log:/mosquitto/log
 
   telegraf:
-    image: telegraf:1.18
+    image: telegraf
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf
     depends_on: 
@@ -39,18 +39,18 @@ services:
     depends_on:
       - influxdb
 
-  chronograf:
-    image: chronograf:1.8
-    ports:
-      - 8888:8888
-    volumes:
-      - chronograf_data:/var/lib/chronograf
-    depends_on:
-      - influxdb
-    environment:
-      - INFLUXDB_URL=http://influxdb:8086
-      - INFLUXDB_USERNAME=${INFLUXDB_USERNAME}
-      - INFLUXDB_PASSWORD=${INFLUXDB_PASSWORD}
+#  chronograf:
+#    image: chronograf:1.8
+#    ports:
+#      - 8888:8888
+#    volumes:
+#      - chronograf_data:/var/lib/chronograf
+#    depends_on:
+#      - influxdb
+#    environment:
+#      - INFLUXDB_URL=http://influxdb:8086
+#      - INFLUXDB_USERNAME=${INFLUXDB_USERNAME}
+#      - INFLUXDB_PASSWORD=${INFLUXDB_PASSWORD}
 
 volumes:
   mosquitto_data:
@@ -58,4 +58,4 @@ volumes:
   node_red_user_data:
   influxdb_data:
   grafana_data:
-  chronograf_data:
+#  chronograf_data:
